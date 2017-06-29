@@ -1,0 +1,25 @@
+From 7609ebaaac6c4a4ae3f33a8a26cc51a09f0a1fbc Mon Sep 17 00:00:00 2001
+From: Nicola Lunghi <nicola.lunghi@emutex.com>
+Date: Thu, 29 Jun 2017 11:23:48 +0100
+Subject: [PATCH] add up2 support fix interrupt pin gpio number
+
+---
+ pifacecommon/interrupts.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/pifacecommon/interrupts.py b/pifacecommon/interrupts.py
+index 59322d1..a547dc9 100644
+--- a/pifacecommon/interrupts.py
++++ b/pifacecommon/interrupts.py
+@@ -14,7 +14,7 @@ IODIR_BOTH = None
+ # IN_EVENT_DIR_OFF = INPUT_DIRECTION_OFF = 1
+ # IN_EVENT_DIR_BOTH = INPUT_DIRECTION_BOTH = None
+ 
+-GPIO_INTERRUPT_PIN = 25
++GPIO_INTERRUPT_PIN = 402
+ GPIO_INTERRUPT_DEVICE = "/sys/class/gpio/gpio%d" % GPIO_INTERRUPT_PIN
+ GPIO_INTERRUPT_DEVICE_EDGE = '%s/edge' % GPIO_INTERRUPT_DEVICE
+ GPIO_INTERRUPT_DEVICE_VALUE = '%s/value' % GPIO_INTERRUPT_DEVICE
+-- 
+2.9.3
+
